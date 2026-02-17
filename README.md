@@ -34,7 +34,9 @@ Streamlit Web Interface
 Models Used
 
 1️)Account Detection
+
 Algorithm: Support Vector Machine (SVM)
+
 Features:
 Followers/Following Ratio
 Account Age
@@ -43,9 +45,10 @@ Bio Presence
 Website Link
 Output: Fake / Legitimate classification
 
- Post Detection
+2) Post Detection
  Algorithm
-Long Short-Term Memory (LSTM) Neural Network
+ Long Short-Term Memory (LSTM) Neural Network
+
  Text Preprocessing
 - Tokenization
 - Sequence Padding
@@ -64,8 +67,12 @@ Long Short-Term Memory (LSTM) Neural Network
 
  How to Run
 git clone https://github.com/yourusername/social-media-phishing-detection.git
+
 cd social-media-phishing-detection
+
 pip install -r requirements.txt
+
 streamlit run app/app.py
+
 
 
