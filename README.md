@@ -18,16 +18,26 @@ Manipulate followers using fake promotions
 System architecture:
 
 User Input
+
    ↓
+   
 Feature Extraction
+
    ↓
+
 Account Model (SVM)
 Post Model (LSTM)
+
    ↓
+   
 Risk Scoring
+  
    ↓
+   
 Final Decision
+   
    ↓
+   
 Streamlit Web Interface
 
 
@@ -73,6 +83,7 @@ cd social-media-phishing-detection
 pip install -r requirements.txt
 
 streamlit run app/app.py
+
 
 
 
