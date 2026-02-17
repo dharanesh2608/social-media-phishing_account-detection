@@ -95,7 +95,7 @@ Detects:
 ## 🚀 How to Run
 
 ```bash
-git clone https://github.com/yourusername/social-media-phishing-detection.git
+git clone https://github.com/dharanesh2608/social-media-phishing-detection.git
 cd social-media-phishing-detection
 pip install -r requirements.txt
 streamlit run app/app.py
@@ -112,5 +112,6 @@ streamlit run app/app.py
 ![Screenshot 3](/images/Screenshot%202026-02-17%20212558.png)
 
 ![Screenshot 4](/images/Screenshot%202026-02-17%20214338.png)
+
 
 
