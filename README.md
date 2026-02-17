@@ -1,210 +1,116 @@
-# 🛡️ Social Media Phishing Account Detection using Machine Learning
+# 🛡️ Social Media Phishing Account & Fake Promotion Detection
 
-![Python](https://img.shields.io/badge/Python-3.9+-blue)
-![Machine Learning](https://img.shields.io/badge/Machine-Learning-green)
-![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+## 📌 Overview
 
----
+This project presents a hybrid Machine Learning system for detecting phishing social media accounts and fraudulent promotional posts.
 
-## 📌 Project Overview
+The system combines:
 
-Social media platforms are increasingly targeted by **phishing and fake accounts** that impersonate genuine users. These malicious accounts are used to spread malware, scams, spam campaigns, and misinformation.
-
-Manual detection methods are inefficient, time-consuming, and not scalable.  
-This project proposes a **Machine Learning–based automated detection system** to classify social media accounts as legitimate or phishing.
+🔹 Support Vector Machine (SVM) for account-level detection  
+🔹 LSTM Deep Learning model for post-level text analysis  
+🔹 Streamlit-based interactive web interface  
 
 ---
 
 ## 🎯 Problem Statement
 
-- Fake accounts impersonate real users.
-- They spread malware, phishing links, and scams.
-- They damage user trust and platform integrity.
-- Manual moderation is slow and expensive.
-- Need for an automated, scalable detection system.
+Fake accounts and phishing promotions are major cybersecurity threats in social media platforms. These malicious actors:
+
+- Impersonate legitimate users  
+- Spread malware and scam links  
+- Manipulate followers using fake promotions  
+
+Manual moderation is inefficient and not scalable.
+
+This project automates detection using AI techniques.
 
 ---
 
-## 🧠 Proposed Solution
-
-This system uses supervised machine learning to detect phishing accounts based on profile-level features.
-
-### 🔹 Step 1: Data Collection
-- Publicly available social media profile datasets
-- Labeled accounts (Legitimate / Phishing)
-
-### 🔹 Step 2: Feature Engineering
-Extracted meaningful features such as:
-
-- Number of followers
-- Number of followings
-- Followers-to-following ratio
-- Bio length
-- Presence of URL in bio
-- Account age
-- Number of posts
-- Profile completeness indicators
-
-### 🔹 Step 3: Model Training
-- Data split into training and testing sets
-- Multiple models trained and compared
-- Hyperparameter tuning applied
-
-### 🔹 Step 4: Prediction System
-- Final model deployed using **Streamlit**
-- Users can input profile data
-- Model predicts: **Legitimate or Phishing**
-
----
-
-## 🏗️ System Architecture
+## 🧠 System Architecture
 
 ```
-Raw Data
+User Input
    ↓
-Data Cleaning
+Feature Extraction
    ↓
-Feature Engineering
+Account Model (SVM)
+Post Model (LSTM)
    ↓
-Model Training
+Risk Scoring
    ↓
-Model Evaluation
+Final Decision
    ↓
-Deployment (Streamlit Web App)
+Streamlit Web Interface
 ```
 
 ---
 
-## 📊 Machine Learning Models Used
+## 🤖 Models Used
 
-The following models were evaluated:
+### 1️⃣ Account Detection
 
-- Logistic Regression
-- Random Forest
-- Support Vector Machine (SVM)
-- XGBoost
+Algorithm: Support Vector Machine (SVM)
 
-### ✅ Final Model Selected: Random Forest
+Features:
 
-**Why Random Forest?**
-- Handles nonlinear patterns well
-- Robust to overfitting
-- Performs well on tabular data
-- Provides feature importance insights
+- Followers/Following Ratio  
+- Account Age  
+- Profile Completeness  
+- Bio Presence  
+- Website Link  
 
----
-
-## 📈 Model Performance
-
-| Metric        | Score  |
-|--------------|--------|
-| **Accuracy**  | 94.2% |
-| **Precision** | 92%   |
-| **Recall**    | 95%   |
-| **F1-Score**  | 93%   |
-
-### 📌 Interpretation
-
-- **High Recall (95%)** → Effectively detects phishing accounts  
-- **High Precision (92%)** → Low false positives  
-- **Balanced F1-score (93%)** → Strong overall performance  
+Output: Fake / Legitimate classification  
 
 ---
 
-## 🔎 Confusion Matrix
+### 2️⃣ Post Detection
 
-> Add your confusion matrix image inside the repository and link it below:
+Algorithm: LSTM (Long Short-Term Memory Network)
 
-```markdown
-![Confusion Matrix](images/confusion_matrix.png)
-```
+Text Preprocessing:
 
----
+- Tokenization  
+- Sequence Padding  
+- Keyword Analysis  
 
-## ⚙️ Tech Stack
+Detects:
 
-### 🧠 Backend & ML
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- XGBoost
-
-### 📊 Visualization
-- Matplotlib
-- Seaborn
-
-### 🌐 Deployment
-- Streamlit
+- Scam keywords  
+- Spam patterns  
+- Emotional manipulation phrases  
 
 ---
 
-## 🚀 How to Run the Project
+## 📊 Technologies Used
 
-### 1️⃣ Clone the repository
+- Python  
+- Scikit-learn  
+- TensorFlow / Keras  
+- Pandas  
+- NumPy  
+- Streamlit  
+
+---
+
+## 🚀 How to Run
 
 ```bash
-git clone <repo-url>
-```
-
-### 2️⃣ Navigate to project folder
-
-```bash
+git clone https://github.com/yourusername/social-media-phishing-detection.git
 cd social-media-phishing-detection
-```
-
-### 3️⃣ Install dependencies
-
-```bash
 pip install -r requirements.txt
-```
-
-### 4️⃣ Run the Streamlit app
-
-```bash
 streamlit run app/app.py
 ```
 
 ---
 
-## 📁 Project Structure
+## 🖥️ Application Screenshots
 
-```
-social-media-phishing-detection/
-│
-├── data/
-├── models/
-├── notebooks/
-├── app/
-│   └── app.py
-├── requirements.txt
-└── README.md
-```
+![Screenshot 1](/images/Screenshot%202026-02-17%20212242.png)
 
----
+![Screenshot 2](/images/Screenshot%202026-02-17%20212322.png)
 
-## 🔮 Future Enhancements
+![Screenshot 3](/images/Screenshot%202026-02-17%20212558.png)
 
-- Deep learning-based detection
-- Real-time API integration
-- Browser extension integration
-- Automated feature extraction pipeline
-- Continuous learning system
+![Screenshot 4](/images/Screenshot%202026-02-17%20214338.png)
 
----
 
-## 📜 License
-
-This project is developed for academic and research purposes.
-
----
-
-## 👨‍💻 Author
-
-**Alex**  
-Machine Learning Enthusiast | AI Developer  
-
----
-
-⭐ If you found this project useful, consider giving it a star!
