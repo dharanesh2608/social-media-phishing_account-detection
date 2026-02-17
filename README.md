@@ -19,24 +19,24 @@ System architecture:
 
 User Input
 
-   ↓
+      ↓
    
 Feature Extraction
 
-   ↓
+      ↓
 
 Account Model (SVM)
 Post Model (LSTM)
 
-   ↓
+      ↓
    
 Risk Scoring
   
-   ↓
+      ↓
    
 Final Decision
    
-   ↓
+      ↓
    
 Streamlit Web Interface
 
@@ -56,8 +56,8 @@ Website Link
 Output: Fake / Legitimate classification
 
 2) Post Detection
- Algorithm
- Long Short-Term Memory (LSTM) Neural Network
+
+Algorithm:Long Short-Term Memory (LSTM) Neural Network
 
  Text Preprocessing
 - Tokenization
@@ -83,6 +83,7 @@ cd social-media-phishing-detection
 pip install -r requirements.txt
 
 streamlit run app/app.py
+
 
 
 
